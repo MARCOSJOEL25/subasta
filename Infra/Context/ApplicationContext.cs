@@ -11,5 +11,6 @@ namespace subasta.Context
         }
 
         public DbSet<user> user { get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }

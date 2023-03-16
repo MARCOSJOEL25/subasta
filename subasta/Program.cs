@@ -10,20 +10,19 @@ using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Context
-//string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+//string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options =>
 {
     options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"], b => b.MigrationsAssembly("subasta"));
+}); //context/>
 
-});
-//context/>
 
-//Cors
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());//automapper
 
 // Add services to the container.
 builder.Services.AddScoped<IRepoUser, RepoUser>();
+builder.Services.AddScoped<IRepoProduct, RepoProduct>();
 
 //Auntenticacion
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
