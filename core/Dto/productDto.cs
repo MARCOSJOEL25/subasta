@@ -9,9 +9,9 @@ namespace core.Dto
 {
     public class productDto
     {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
+        public int productId { get; set; }
+        public string productName { get; set; }
 
-        public string Description { get; set; }
+        public string description { get; set; }
     }
 }
