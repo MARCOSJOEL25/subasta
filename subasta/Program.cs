@@ -23,6 +23,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());//automa
 // Add services to the container.
 builder.Services.AddScoped<IRepoUser, RepoUser>();
 builder.Services.AddScoped<IRepoProduct, RepoProduct>();
+builder.Services.AddScoped<IRepoCategory, RepoCategory>();
 
 //Auntenticacion
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

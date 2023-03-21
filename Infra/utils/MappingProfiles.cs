@@ -16,6 +16,7 @@ namespace Infra.utils
         {
             CreateMap<user, userDto>().ReverseMap();
             CreateMap<Product, productDto>().ReverseMap();
+            CreateMap<Category, categoryDto>().ReverseMap();
         }
     }
 }

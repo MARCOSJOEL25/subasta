@@ -1,22 +1,17 @@
-﻿using System;
+﻿using core.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace core.Models
+namespace core.Dto
 {
-    public class Category
+    public class categoryDto
     {
-
-        [Key]
         public int Id { get; set; }
-
-        [Required]
         public string name { get; set; }
-
         public List<Product> Products { get; set; }
-
     }
 }
