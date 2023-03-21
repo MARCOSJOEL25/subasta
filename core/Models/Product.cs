@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,15 @@ namespace core.Models
 
         [Required]
         public string Description { get; set; }
+
+        [Required]
+        public  double price { get; set; }
+
+        [Required]
+        public string location { get; set; }
+
+        [Required]
+        public int CategoryId { get; set; }
 
     }
 }

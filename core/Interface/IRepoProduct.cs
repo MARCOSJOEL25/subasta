@@ -16,5 +16,6 @@ namespace core.Interface
         Task<string> createOrUpdate(productDto product);
 
         Task<string> DeleteProduct(int id);
+        Task<List<productDto>> SearchProduct(string searchWord);
     }
 }

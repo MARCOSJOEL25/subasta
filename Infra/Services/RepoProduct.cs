@@ -72,5 +72,11 @@ namespace Infra.Services
             var listProduct = await _Db.Product.ToListAsync();
             return _mapper.Map<List<productDto>>(listProduct);
         }
+
+        public async Task<List<productDto>> SearchProduct(string searchWord)
+        {
+            var listProduct = await _Db.Product.Where(x => x.ProductName.ToLower().Contains(searchWord)).ToListAsync();
+            return _mapper.Map<List<productDto>>(listProduct);
+        }
     }
 }

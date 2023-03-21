@@ -21,6 +21,11 @@ namespace subasta.Controllers
             _mapper = mapper;
             response = new DtoResponse();
         }
+        [HttpGet("search/{SearchWord}")]
+        public async Task<List<productDto>> Search(string SearchWord)
+        {
+            return await _repoProduct.SearchProduct(SearchWord);
+        }
 
         [HttpGet]
         public async Task<List<productDto>> Get()
