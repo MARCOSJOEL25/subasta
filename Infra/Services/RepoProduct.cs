@@ -61,6 +61,12 @@ namespace Infra.Services
             
         }
 
+        public async Task<List<productDto>> filterByCategory(int id)
+        {
+            var listProduct = await _Db.Product.Where(x => x.CategoryId == id).ToListAsync();
+            return _mapper.Map<List<productDto>>(listProduct);
+        }
+
         public async Task<productDto> GetByIdProduct(int id)
         {
             var product = await _Db.Product.FirstOrDefaultAsync(x => x.ProductId == id);
@@ -78,5 +84,7 @@ namespace Infra.Services
             var listProduct = await _Db.Product.Where(x => x.ProductName.ToLower().Contains(searchWord)).ToListAsync();
             return _mapper.Map<List<productDto>>(listProduct);
         }
+
+        
     }
 }

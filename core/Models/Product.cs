@@ -20,13 +20,13 @@ namespace core.Models
         public string Description { get; set; }
 
         [Required]
-        public  double price { get; set; }
+        public double price { get; set; } = 0.5;
 
         [Required]
-        public string location { get; set; }
+        public string location { get; set; } = "sdA";
 
         [Required]
-        public int CategoryId { get; set; }
+        public int CategoryId { get; set; } = 15;
 
     }
 }

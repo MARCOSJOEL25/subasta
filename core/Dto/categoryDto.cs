@@ -12,6 +12,6 @@ namespace core.Dto
     {
         public int Id { get; set; }
         public string name { get; set; }
-        public List<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 }

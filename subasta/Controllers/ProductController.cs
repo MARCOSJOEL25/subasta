@@ -27,6 +27,12 @@ namespace subasta.Controllers
             return await _repoProduct.SearchProduct(SearchWord);
         }
 
+        [HttpGet("filterByCategory/{id:int}")]
+        public async Task<List<productDto>> filterByCategory(int id)
+        {
+            return await _repoProduct.filterByCategory(id);
+        }
+
         [HttpGet]
         public async Task<List<productDto>> Get()
         {
@@ -88,5 +94,7 @@ namespace subasta.Controllers
             response.Message = "algo salio mal";
             return BadRequest(response);
         }
+
+
     }
 }

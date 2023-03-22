@@ -17,5 +17,7 @@ namespace core.Interface
 
         Task<string> DeleteProduct(int id);
         Task<List<productDto>> SearchProduct(string searchWord);
+
+        Task<List<productDto>> filterByCategory(int id);
     }
 }
