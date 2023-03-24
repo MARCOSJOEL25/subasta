@@ -20,5 +20,8 @@ namespace core.Models
 
         [Required]
         public byte[] PasswordSalt { get; set; }
+
+        [Required]
+        public int userId { get; set; }
     }
 }
